@@ -1,0 +1,16 @@
+.prevContainer, .nextContainer {
+	width:30%;
+
+}
+
+.centralContainer{
+	width:40%;
+	float:left;
+}
+
+.prevContainer{
+	float: left;
+}
+.nextContainer{
+	float:right;
+}
