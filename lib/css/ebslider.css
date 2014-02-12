@@ -1,16 +1,32 @@
-.prevContainer, .nextContainer {
-	width:30%;
+.ebslider{
+	width:740px;
+	margin-right: auto;
+	margin-left: auto;
+	clear:both;
+}
+.prevContainer, .nextContainer, {
+	border:2px solid black;
+	padding:10px;
+	margin-right: 10px;
+	margin-left: 10px;	
 
 }
-
+.prevContainer, .nextContainer img{
+	width:200px;
+	height:200px;
+}
 .centralContainer{
-	width:40%;
+	
 	float:left;
+}
+.centralContainer img{
+	width:250px;
+	height:250px;
 }
 
 .prevContainer{
 	float: left;
 }
 .nextContainer{
-	float:right;
+	float:left;
 }
