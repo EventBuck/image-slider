@@ -4,6 +4,12 @@
 	margin-left: auto;
 	clear:both;
 }
+.ebBlock {
+	display: none;
+}
+.prevContainer, .nextContainer, .centralContainer {
+	display: block;
+}
 .prevContainer, .nextContainer, {
 	border:2px solid black;
 	padding:10px;
