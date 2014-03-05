@@ -3,12 +3,15 @@
 	margin-right: auto;
 	margin-left: auto;
 	clear:both;
+	position:relative;
 }
 .ebBlock {
 	display: none;
 }
 .prevContainer, .nextContainer, .centralContainer {
-	display: block;
+	display: inline;
+	position:absolute;
+	float:left;
 }
 .prevContainer, .nextContainer, {
 	border:2px solid black;
@@ -16,28 +19,130 @@
 }
 
 .prevContainer, .nextContainer img{
-	width:100px;
-	height:100px;
-
-}
-.centralContainer{
-	float:left;
 	width:200px;
-	margin-left:150px;
+	height:200px;
+
 }
 .centralContainer img{
-	width:150px;
-	height:150px;
+	width:250px;
+	height:250px;
+}
+div.centralContainer{
+	-moz-animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	-moz-animation-name:nextToCentral;
+	-webkit-animation-name: nextToCentral;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
 }
 
-.prevContainer{
-	width:150px;
-	float: left;
-	
+
+div.prevContainer{
+	-moz-animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	-moz-animation-name: centralToPrev;
+	-webkit-animation-name: centralToPrev;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
 }
-.nextContainer{
-	width:150px;
-	float:left;
-	margin-left:300px;
+div.nextContainer{
+	-moz-animation-duration:2s;
+	-webkit-animation-duration: 2s;
+	-moz-animation-name: nothingToNext;
+	-webkit-animation-name: nothingToNext;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+}
+
+@-moz-keyframes nextToCentral
+{
 	
+	from{
+		left:450px;
+		width:200px;
+	}
+	
+	to {
+		left:200px;
+		width: 250px;
+	}
+}
+@-webkit-keyframes nextToCentral
+{
+	
+	from{
+		left:450px;
+		width:200px;
+	}
+	
+	to {
+		left:200px;
+		width: 250px;
+	}
+}
+@-moz-keyframes centralToPrev
+{
+	
+	from{
+		left:200px;
+		width:250px;
+	}
+	
+	to {
+		left:0;
+		width: 200px;
+	}
+}
+@-webkit-keyframes centralToPrev
+{
+	
+	from{
+		left:200px;
+		width:250px;
+	}
+	
+	to {
+		left:0;
+		width: 200px;
+	}
+}
+@-moz-keyframes nothingToNext
+{
+	from{
+		left:450px;
+		width:100px;
+		height:100px;
+	}
+	
+	50% {
+		left:640px;
+		width:150px;
+		height:150px;
+	}
+	to {
+		left:450px;
+		width: 200px;
+		height:200px;
+	}
+}
+
+@-webkit-keyframes nothingToNext
+{
+	
+	from{
+		left:450px;
+		width:100px;
+		height:100px;
+	}
+	
+	50% {
+		left:640px;
+		width:150px;
+		height:150px;
+	}
+	to {
+		left:450px;
+		width: 200px;
+		height:200px;
+	}
 }
