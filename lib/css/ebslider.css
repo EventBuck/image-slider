@@ -12,27 +12,32 @@
 }
 .prevContainer, .nextContainer, {
 	border:2px solid black;
-	padding:10px;
-	margin-right: 10px;
-	margin-left: 10px;	
 
 }
+
 .prevContainer, .nextContainer img{
-	width:200px;
-	height:200px;
+	width:100px;
+	height:100px;
+
 }
 .centralContainer{
-	
 	float:left;
+	width:200px;
+	margin-left:150px;
 }
 .centralContainer img{
-	width:250px;
-	height:250px;
+	width:150px;
+	height:150px;
 }
 
 .prevContainer{
+	width:150px;
 	float: left;
+	
 }
 .nextContainer{
+	width:150px;
 	float:left;
+	margin-left:300px;
+	
 }
