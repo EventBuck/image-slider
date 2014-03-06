@@ -8,6 +8,31 @@
 .ebBlock {
 	display: none;
 }
+.eb-placeholder
+{
+	display:inline;
+	background-color:#7A7A7A;
+	z-index:-1;
+	position:absolute;
+}
+.prev-placeholder
+{
+	left:0;
+	width:200px;
+	height:200px;
+}
+.central-placeholder
+{
+	left:200px;
+	width:250px;
+	height:250px;
+}
+.next-placeholder
+{
+	left:450px;
+	width:200px;
+	height:200px;
+}
 .prevContainer, .nextContainer, .centralContainer {
 	display: inline;
 	position:absolute;
@@ -18,7 +43,7 @@
 
 }
 
-.prevContainer, .nextContainer img{
+.prevContainer img, .nextContainer img, .hasPassed img{
 	width:200px;
 	height:200px;
 
@@ -53,7 +78,67 @@ div.nextContainer{
 	-webkit-animation-fill-mode: forwards;
 	-moz-animation-fill-mode: forwards;
 }
+div.hasPassed{
+	display:inline;
+	position:absolute;
+	float:left;
+	-moz-animation-duration:2s;
+	-webkit-animation-duration: 2s;
+	-moz-animation-name: prevToNothing;
+	-webkit-animation-name: prevToNothing;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+}
 
+@-moz-keyframes nothingToNext
+{
+	from{
+		left:450px;
+		width:200px;
+		height:200px;
+		z-index: -1;
+	}
+	
+	50% {
+		left:640px;
+		width:200px;
+		height:200px;
+	}
+	to {
+		left:450px;
+		width: 200px;
+		height:200px;
+		z-index:0;
+	}
+}
+
+@-webkit-keyframes nothingToNext
+{
+	
+	from{
+		left:450px;
+		width:200px;
+		height:200px;
+		z-index:-1;
+	}
+	
+	50% {
+		z-index:-1;
+		left:651px;
+		width:200px;
+		height:200px;
+	}
+	51%{
+		z-index:1;
+	}
+
+	to {
+		left:450px;
+		width:200px;
+		height:200px;
+		z-index:1;
+	}
+}
 @-moz-keyframes nextToCentral
 {
 	
@@ -61,25 +146,30 @@ div.nextContainer{
 		left:450px;
 		width:200px;
 	}
+
 	
 	to {
 		left:200px;
 		width: 250px;
 	}
 }
+
 @-webkit-keyframes nextToCentral
 {
 	
 	from{
 		left:450px;
 		width:200px;
+		height:200px;
 	}
 	
 	to {
 		left:200px;
 		width: 250px;
+		height:250px;
 	}
 }
+
 @-moz-keyframes centralToPrev
 {
 	
@@ -93,56 +183,71 @@ div.nextContainer{
 		width: 200px;
 	}
 }
+
 @-webkit-keyframes centralToPrev
 {
 	
 	from{
 		left:200px;
 		width:250px;
+		height:250px;
 	}
-	
+
 	to {
 		left:0;
 		width: 200px;
-	}
-}
-@-moz-keyframes nothingToNext
-{
-	from{
-		left:450px;
-		width:100px;
-		height:100px;
-	}
-	
-	50% {
-		left:640px;
-		width:150px;
-		height:150px;
-	}
-	to {
-		left:450px;
-		width: 200px;
-		height:200px;
+		height: 200px;
 	}
 }
 
-@-webkit-keyframes nothingToNext
+
+@-moz-keyframes prevToNothing
 {
-	
 	from{
-		left:450px;
-		width:100px;
-		height:100px;
+		left:0px;
+		width:200px;
+		height:200px;
+
 	}
 	
 	50% {
-		left:640px;
-		width:150px;
-		height:150px;
+		left:-200px;
+		width:200px;
+		height:200px;
 	}
 	to {
-		left:450px;
+		z-index:-2;
+		left:0px;
 		width: 200px;
 		height:200px;
+		visibility: hidden;
+	}
+}
+
+@-webkit-keyframes prevToNothing
+{
+	
+	from{
+		left:0px;
+		width:200px;
+		height:200px;
+	}
+	
+	50% {
+		z-index:0;
+		left:-201px;
+		width:200px;
+		height:200px;
+	}
+	51% {
+		z-index:-2;
+	}
+
+	to {
+		z-index:-2;
+		left:0px;
+		width: 200px;
+		height:200px;
+		visibility: hidden;
 	}
 }
