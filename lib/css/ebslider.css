@@ -1,9 +1,28 @@
 .ebslider{
-	width:740px;
+	width:263px;
 	margin-right: auto;
 	margin-left: auto;
 	clear:both;
 	position:relative;
+	 -webkit-perspective: 1100px;
+         -moz-perspective: 1100px;
+           -o-perspective: 1100px;
+              perspective: 1100px;
+}
+#ebCarousel{
+	  width: 100%;
+      height: 100%;
+      border: 1px solid #CCC;
+      position: absolute;
+      -webkit-transform: translateZ( -357px );
+         -moz-transform: translateZ( -357px );
+           -o-transform: translateZ( -357px );
+              transform: translateZ( -357px );
+      -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      
 }
 .ebBlock {
 	display: none;
@@ -33,25 +52,19 @@
 	width:200px;
 	height:200px;
 }
-.prevContainer, .nextContainer, .centralContainer {
-	display: inline;
+.prevContainer, .nextContainer, .centralContainer, .hasPassed {
+	display: block;
 	position:absolute;
-	float:left;
-}
-.prevContainer, .nextContainer, {
 	border:2px solid black;
+	
+}
+
+.prevContainer img, .nextContainer img, .hasPassed img, .centralContainer img{
+	width:260px;
+	height:260px;
 
 }
 
-.prevContainer img, .nextContainer img, .hasPassed img{
-	width:200px;
-	height:200px;
-
-}
-.centralContainer img{
-	width:250px;
-	height:250px;
-}
 div.centralContainer{
 	-moz-animation-duration: 2s;
 	-webkit-animation-duration: 2s;
@@ -79,9 +92,6 @@ div.nextContainer{
 	-moz-animation-fill-mode: forwards;
 }
 div.hasPassed{
-	display:inline;
-	position:absolute;
-	float:left;
 	-moz-animation-duration:2s;
 	-webkit-animation-duration: 2s;
 	-moz-animation-name: prevToNothing;
@@ -116,27 +126,18 @@ div.hasPassed{
 {
 	
 	from{
-		left:450px;
-		width:200px;
-		height:200px;
-		z-index:-1;
+		-webkit-transform: rotateY(  80deg ) translateZ( 357px );
+         -moz-transform: rotateY(  80deg ) translateZ( 357px );
+           -o-transform: rotateY(  80deg ) translateZ( 357px );
+              transform: rotateY(  80deg ) translateZ( 357px );
 	}
 	
-	50% {
-		z-index:-1;
-		left:651px;
-		width:200px;
-		height:200px;
-	}
-	51%{
-		z-index:1;
-	}
 
 	to {
-		left:450px;
-		width:200px;
-		height:200px;
-		z-index:1;
+		-webkit-transform: rotateY(  40deg ) translateZ( 357px );
+         -moz-transform: rotateY(  40deg ) translateZ( 357px );
+           -o-transform: rotateY(  40deg ) translateZ( 357px );
+              transform: rotateY(  40deg ) translateZ( 357px );
 	}
 }
 @-moz-keyframes nextToCentral
@@ -151,6 +152,7 @@ div.hasPassed{
 	to {
 		left:200px;
 		width: 250px;
+
 	}
 }
 
@@ -158,15 +160,17 @@ div.hasPassed{
 {
 	
 	from{
-		left:450px;
-		width:200px;
-		height:200px;
+		-webkit-transform: rotateY(  40deg ) translateZ( 357px );
+         -moz-transform: rotateY(  40deg ) translateZ( 357px );
+           -o-transform: rotateY(  40deg ) translateZ( 357px );
+              transform: rotateY(  40deg ) translateZ( 357px );
 	}
 	
 	to {
-		left:200px;
-		width: 250px;
-		height:250px;
+		-webkit-transform: rotateY( 0deg ) translateZ( 357px );
+         -moz-transform: rotateY(   0deg ) translateZ( 357px );
+           -o-transform: rotateY(   0deg ) translateZ( 357px );
+              transform: rotateY(   0deg ) translateZ( 357px );
 	}
 }
 
@@ -181,6 +185,7 @@ div.hasPassed{
 	to {
 		left:0;
 		width: 200px;
+
 	}
 }
 
@@ -188,15 +193,17 @@ div.hasPassed{
 {
 	
 	from{
-		left:200px;
-		width:250px;
-		height:250px;
+		-webkit-transform: rotateY( 0deg ) translateZ( 357px );
+         -moz-transform: rotateY(   0deg ) translateZ( 357px );
+           -o-transform: rotateY(   0deg ) translateZ( 357px );
+              transform: rotateY(   0deg ) translateZ( 357px );
 	}
 
 	to {
-		left:0;
-		width: 200px;
-		height: 200px;
+		 -webkit-transform: rotateY( -40deg ) translateZ( 357px );
+         -moz-transform: rotateY( -40deg ) translateZ( 357px );
+           -o-transform: rotateY( -40deg ) translateZ( 357px );
+              transform: rotateY( -40deg ) translateZ( 357px );
 	}
 }
 
@@ -228,26 +235,20 @@ div.hasPassed{
 {
 	
 	from{
-		left:0px;
-		width:200px;
-		height:200px;
+		 -webkit-transform: rotateY( 320deg ) translateZ( 357px );
+         -moz-transform: rotateY( 320deg ) translateZ( 357px );
+           -o-transform: rotateY( 320deg ) translateZ( 357px );
+              transform: rotateY( 320deg ) translateZ( 357px );
 	}
 	
-	50% {
-		z-index:0;
-		left:-201px;
-		width:200px;
-		height:200px;
-	}
-	51% {
-		z-index:-2;
-	}
 
-	to {
-		z-index:-2;
-		left:0px;
-		width: 200px;
-		height:200px;
-		visibility: hidden;
+
+	100% {
+		-webkit-transform: rotateY( 280deg ) translateZ( 357px );
+         -moz-transform: rotateY( 280deg ) translateZ( 357px );
+           -o-transform: rotateY( 280deg ) translateZ( 357px );
+              transform: rotateY( 280deg ) translateZ( 357px );
+              visibility:hidden;
 	}
+	
 }
