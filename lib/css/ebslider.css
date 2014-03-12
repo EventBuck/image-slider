@@ -1,5 +1,9 @@
+section{
+	display: block;
+}
 .ebslider{
 	width:263px;
+	height:270px;
 	margin-right: auto;
 	margin-left: auto;
 	clear:both;
@@ -9,7 +13,7 @@
            -o-perspective: 1100px;
               perspective: 1100px;
 }
-#ebCarousel{
+section.ebCarousel{
 	  width: 100%;
       height: 100%;
       border: 1px solid #CCC;
@@ -24,35 +28,26 @@
               transform-style: preserve-3d;
       
 }
+section.ebControl{
+	position: absolute;
+	left:40px;
+  	top:300px;
+  	font-size: 20px;
+  	font-weight: bold;
+}
+section.ebControl a{
+	padding:20px;
+}
 .ebBlock {
 	display: none;
 }
-.eb-placeholder
-{
-	display:inline;
-	background-color:#2E2E2E;
-	z-index:-1;
-	position:absolute;
-}
-.prev-placeholder
-{
-	left:0;
-	width:200px;
-	height:200px;
-}
-.central-placeholder
-{
-	left:200px;
-	width:250px;
-	height:250px;
-}
-.next-placeholder
-{
-	left:450px;
-	width:200px;
-	height:200px;
-}
+
+
 .prevContainer, .nextContainer, .centralContainer, .hasPassed {
+	-moz-animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
 	display: block;
 	position:absolute;
 	border:2px solid black;
@@ -65,53 +60,45 @@
 
 }
 
-div.centralContainer{
-	-moz-animation-duration: 2s;
-	-webkit-animation-duration: 2s;
+.centralContainer-forward{
+	
 	-moz-animation-name:nextToCentral;
 	-webkit-animation-name: nextToCentral;
-	-webkit-animation-fill-mode: forwards;
-	-moz-animation-fill-mode: forwards;
+	
 }
 
-div.centralContainer .backward{
+.centralContainer-backward{
 	-moz-animation-name:prevToCentral;
 	-webkit-animation-name:prevToCentral;
 }
 
-div.prevContainer{
-	-moz-animation-duration: 2s;
-	-webkit-animation-duration: 2s;
+.prevContainer-forward{
+
 	-moz-animation-name: centralToPrev;
 	-webkit-animation-name: centralToPrev;
-	-webkit-animation-fill-mode: forwards;
-	-moz-animation-fill-mode: forwards;
+
 }
-div.prevContainer .backward{
+.prevContainer-backward{
 	-moz-animation-name:nothingToPrev;
 	-webkit-animation-name:nothingToPrev;
 }
-div.nextContainer{
-	-moz-animation-duration:2s;
-	-webkit-animation-duration: 2s;
+.nextContainer-forward{
+
 	-moz-animation-name: nothingToNext;
 	-webkit-animation-name: nothingToNext;
-	-webkit-animation-fill-mode: forwards;
-	-moz-animation-fill-mode: forwards;
+
 }
-div.nextContainer .backward{
+.nextContainer-backward{
 	-moz-animation-name:centralToNext;
 	-webkit-animation-name:centralToNext;
 }
-div.hasPassed{
-	-moz-animation-duration:2s;
-	-webkit-animation-duration: 2s;
+.hasPassed-forward{
+
 	-moz-animation-name: prevToNothing;
 	-webkit-animation-name: prevToNothing;
-	-webkit-animation-fill-mode: forwards;
-	-moz-animation-fill-mode: forwards;
+
 }
-div.hasPassed .backward{
+.hasPassed-backward{
 	-moz-animation-name:nextToNothing;
 	-webkit-animation-name:nextToNothing;
 }
@@ -272,10 +259,10 @@ div.hasPassed .backward{
 {
 	
 	from{
-		 -webkit-transform: rotateY( 320deg ) translateZ( 357px );
-         -moz-transform: rotateY( 320deg ) translateZ( 357px );
-           -o-transform: rotateY( 320deg ) translateZ( 357px );
-              transform: rotateY( 320deg ) translateZ( 357px );
+		 -webkit-transform: rotateY( -40deg ) translateZ( 357px );
+         -moz-transform: rotateY( -40deg ) translateZ( 357px );
+           -o-transform: rotateY( -40deg ) translateZ( 357px );
+              transform: rotateY( -40deg ) translateZ( 357px );
 	}
 	
 
