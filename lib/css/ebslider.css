@@ -35,6 +35,9 @@ section.ebControl{
   	font-size: 20px;
   	font-weight: bold;
 }
+.ebControl a{
+	cursor:pointer;
+}
 section.ebControl a{
 	padding:20px;
 }
@@ -278,7 +281,6 @@ section.ebControl a{
 
 @-webkit-keyframes nothingToPrev
 {
-	
 	from{
 		-webkit-transform: rotateY( 280deg ) translateZ( 357px );
          -moz-transform: rotateY(   280deg ) translateZ( 357px );
@@ -295,36 +297,84 @@ section.ebControl a{
 }
 @-webkit-keyframes centralToNext
 {
-	
 	from{
 		-webkit-transform: rotateY( 0deg ) translateZ( 357px );
-         -moz-transform: rotateY(   0deg ) translateZ( 357px );
-           -o-transform: rotateY(   0deg ) translateZ( 357px );
-              transform: rotateY(   0deg ) translateZ( 357px );
 	}
 
 	to {
 		 -webkit-transform: rotateY( 40deg ) translateZ( 357px );
+	}
+}
+@-moz-keyframes centralToNext
+{
+	from{
+         -moz-transform: rotateY(   0deg ) translateZ( 357px );
+	}
+
+	to {
          -moz-transform: rotateY( 40deg ) translateZ( 357px );
+
+	}
+}
+@-o-keyframes centralToNext
+{
+	from{
+           -o-transform: rotateY(   0deg ) translateZ( 357px );
+	}
+
+	to {
            -o-transform: rotateY( 40deg ) translateZ( 357px );
+
+	}
+}
+@keyframes centralToNext
+{
+	from{
+              transform: rotateY(   0deg ) translateZ( 357px );
+	}
+
+	to {
               transform: rotateY( 40deg ) translateZ( 357px );
 	}
 }
 
 @-webkit-keyframes nextToNothing
 {
-	
 	from{
 		-webkit-transform: rotateY(  40deg ) translateZ( 357px );
-         -moz-transform: rotateY(  40deg ) translateZ( 357px );
-           -o-transform: rotateY(  40deg ) translateZ( 357px );
-              transform: rotateY(  40deg ) translateZ( 357px );
 	}
 	
 	to {
 		-webkit-transform: rotateY( 80deg ) translateZ( 357px );
+	}
+}
+@-moz-keyframes nextToNothing
+{
+	from{
+         -moz-transform: rotateY(  40deg ) translateZ( 357px );
+	}
+	
+	to {
          -moz-transform: rotateY(   80deg ) translateZ( 357px );
+	}
+}
+@-o-keyframes nextToNothing
+{
+	from{
+           -o-transform: rotateY(  40deg ) translateZ( 357px );
+	}
+	
+	to {
            -o-transform: rotateY(   80deg ) translateZ( 357px );
-              transform: rotateY(   80deg ) translateZ( 357px );
+	}
+}
+@keyframes nextToNothing
+{
+	from{
+            transform: rotateY(  40deg ) translateZ( 357px );
+	}
+	
+	to {
+            transform: rotateY(   80deg ) translateZ( 357px );
 	}
 }
