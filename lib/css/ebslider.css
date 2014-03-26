@@ -14,18 +14,19 @@ section{
               perspective: 1100px;
 }
 section.ebCarousel{
-	  width: 100%;
-      height: 100%;
+	  width: 90%;
+      height: 90%;
       border: 1px solid #CCC;
       position: absolute;
-      -webkit-transform: translateZ( -357px );
-         -moz-transform: translateZ( -357px );
-           -o-transform: translateZ( -357px );
-              transform: translateZ( -357px );
+      -webkit-transform: translateZ( -557px );
+         -moz-transform: translateZ( -557px );
+           -o-transform: translateZ( -557px );
+              transform: translateZ( -557px );
       -webkit-transform-style: preserve-3d;
          -moz-transform-style: preserve-3d;
            -o-transform-style: preserve-3d;
               transform-style: preserve-3d;
+
       
 }
 section.ebControl{
@@ -33,7 +34,7 @@ section.ebControl{
 	left:40px;
   	top:300px;
   	font-size: 20px;
-  	font-weight: bold;
+  	font-weight: lighter;
 }
 .ebControl a{
 	cursor:pointer;
@@ -53,13 +54,13 @@ section.ebControl a{
 	-moz-animation-fill-mode: forwards;
 	display: block;
 	position:absolute;
-	border:2px solid black;
+	border:8px solid  #87CEFA;
 	
 }
 
 .prevContainer img, .nextContainer img, .hasPassed img, .centralContainer img{
-	width:260px;
-	height:260px;
+	width:240px;
+	height:240px;
 
 }
 
